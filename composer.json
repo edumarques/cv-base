@@ -7,7 +7,8 @@
     "php": ">=8.0",
     "laminas/laminas-component-installer": "^1.0 || ^2.1",
     "laminas/laminas-skeleton-installer": "^0.2 || ^1.0",
-    "laminas/laminas-mvc": "^3.1.1"
+    "laminas/laminas-mvc": "^3.1.1",
+    "laminas/laminas-form": "^2.15"
   },
   "require-dev": {
     "laminas/laminas-development-mode": "^3.2",
@@ -17,12 +18,14 @@
   },
   "autoload": {
     "psr-4": {
-      "Application\\": "module/Application/src/"
+      "Application\\": "module/Application/src/",
+      "Cv\\": "module/Cv/src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ApplicationTest\\": "module/Application/test/"
+      "ApplicationTest\\": "module/Application/test/",
+      "CvTest\\": "module/Cv/test/"
     }
   },
   "scripts": {

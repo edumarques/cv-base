@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace ApplicationTest\Controller;
+namespace CvTest\Controller;
 
-use Application\Controller\IndexController;
+use Cv\Controller\CvController;
 use Laminas\Stdlib\ArrayUtils;
 use Laminas\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
-class IndexControllerTest extends AbstractHttpControllerTestCase
+class CvControllerTest extends AbstractHttpControllerTestCase
 {
     public function setUp(): void
     {
@@ -32,11 +32,18 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
     public function testIndexActionCanBeAccessed(): void
     {
         $this->dispatch('/', 'GET');
-        $this->assertResponseStatusCode(302);
+        $this->assertResponseStatusCode(200);
         $this->assertModuleName('application');
-        $this->assertControllerName(IndexController::class); // as specified in router's controller name alias
+        $this->assertControllerName(CvController::class); // as specified in router's controller name alias
         $this->assertControllerClass('IndexController');
         $this->assertMatchedRouteName('home');
+    }
+
+
+    public function testIndexActionViewModelTemplateRenderedWithinLayout(): void
+    {
+        $this->dispatch('/', 'GET');
+        $this->assertQuery('.container .jumbotron');
     }
 
 
