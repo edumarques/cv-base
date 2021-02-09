@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace Cv;
 
 use Cv\Controller\CvController;
+use Cv\Factory\CvControllerFactory;
+use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
+use Laminas\Http\PhpEnvironment\RemoteAddress;
 use Laminas\Router\Http\Literal;
 use Laminas\ServiceManager\Factory\InvokableFactory;
 
@@ -23,18 +26,33 @@ return [
             ],
         ],
     ],
+    'service_manager'  => [
+        'factories' => [
+            RemoteAddress::class => InvokableFactory::class,
+        ],
+    ],
     'controllers'  => [
         'factories' => [
-            CvController::class => InvokableFactory::class,
+            CvController::class => CvControllerFactory::class,
         ],
     ],
     'view_manager' => [
-        'exception_template'  => 'error/index',
-        'template_map'        => [
-            'error/index' => __DIR__ . '/../view/error/index.phtml',
-        ],
         'template_path_stack' => [
             __DIR__ . '/../view',
+        ],
+    ],
+    'doctrine'     => [
+        'driver' => [
+            __NAMESPACE__ . '_driver' => [
+                'class' => AnnotationDriver::class,
+                'cache' => 'array',
+                'paths' => [__DIR__ . '/../src/Entity'],
+            ],
+            'orm_default'             => [
+                'drivers' => [
+                    __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver',
+                ],
+            ],
         ],
     ],
 ];

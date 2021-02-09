@@ -6,4 +6,7 @@ data/cache/*
 phpunit.xml
 .phpunit.result.cache
 .idea
-composer.lock
+db/db.sqlite
+db/db.sqlite3
+data/cvs/*
+data/DoctrineORMModule
