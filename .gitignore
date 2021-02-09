@@ -9,4 +9,5 @@ phpunit.xml
 db/db.sqlite
 db/db.sqlite3
 data/cvs/*
+!data/cvs/.gitkeep
 data/DoctrineORMModule
