@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b7a3cca-85de-40a0-b4de-61f4194881a4" name="Default Changelist" comment="Add Cv module">
-      <change beforePath="$PROJECT_DIR$/.idea/cv-base.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cv-base.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="3b7a3cca-85de-40a0-b4de-61f4194881a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/form.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +203,7 @@
       <workItem from="1612749720865" duration="832000" />
       <workItem from="1612750921188" duration="8361000" />
       <workItem from="1612806066152" duration="47659000" />
-      <workItem from="1612981665249" duration="10211000" />
+      <workItem from="1612981665249" duration="12190000" />
     </task>
     <task id="LOCAL-00001" summary="Add application structure files">
       <created>1612753013817</created>
@@ -255,7 +254,28 @@
       <option name="project" value="LOCAL" />
       <updated>1612992403752</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add/adjust scripts' descriptions">
+      <created>1612992521232</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612992521232</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix coding standard issues">
+      <created>1612992658221</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612992658221</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add .idea files">
+      <created>1612992749533</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612992749533</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +289,10 @@
     <MESSAGE value="Implement scripts and configuration for tests and development environment" />
     <MESSAGE value="Adjust index route and layout template in Application module" />
     <MESSAGE value="Implement CV sending process with storage in DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement CV sending process with storage in DB" />
+    <MESSAGE value="Add/adjust scripts' descriptions" />
+    <MESSAGE value="Fix coding standard issues" />
+    <MESSAGE value="Add .idea files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add .idea files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
