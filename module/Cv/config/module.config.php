@@ -41,7 +41,7 @@ return [
             __DIR__ . '/../view',
         ],
     ],
-    'doctrine'     => [
+    'doctrine'                           => [
         'driver' => [
             __NAMESPACE__ . '_driver' => [
                 'class' => AnnotationDriver::class,
@@ -55,4 +55,5 @@ return [
             ],
         ],
     ],
+    CvControllerFactory::CV_STORAGE_PATH => __DIR__ . '/../../../data/cvs/',
 ];

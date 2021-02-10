@@ -1,67 +1,92 @@
 <?php
 
-/**
- * @var Laminas\View\Renderer\PhpRenderer $this
- */
+declare(strict_types=1);
 
+use Cv\Form\CvForm;
+use Cv\Entity\Cv;
+
+$this->headTitle('Submit a new CV');
+
+/** @var CvForm $form */
+$form    = $this->form;
+$error   = $this->error;
+$success = $this->success;
+
+$name      = $form->get(Cv::NAME)->setAttribute('class', 'form-control');
+$email     = $form->get(Cv::EMAIL)->setAttribute('class', 'form-control');
+$telephone = $form->get(Cv::TELEPHONE)->setAttribute('class', 'form-control');
+$position  = $form->get(Cv::POSITION)->setAttribute('class', 'form-control');
+$education = $form->get(Cv::EDUCATION)->setAttribute('class', 'form-control');
+$comments  = $form->get(Cv::COMMENTS)->setAttribute('class', 'form-control');
+$file      = $form->get(Cv::FILE)->setAttribute('class', 'form-control');
+$submit    = $form->get('submit')->setAttribute('class', 'btn btn-primary');
+
+$form->setAttribute('action', $this->url('send-cv', ['action' => 'send']));
+$form->prepare();
+
+$validationErrorAttributes = ['class' => 'alert alert-danger', 'style' => 'list-style-type:none;'];
 
 ?>
+<?php if (isset($error)) { ?>
+    <div class="alert alert-danger" role="alert">
+        <?= $error ?>
+    </div>
+<?php } ?>
+<?php if (isset($success)) { ?>
+    <div class="alert alert-success" role="alert">
+        <?= $success ?>
+    </div>
+<?php } ?>
 <div class="jumbotron">
-    <h1 class="display-4">Welcome to<br>Laminas MVC Skeleton Application</h1>
-
-    <p>
-        Congratulations! You have successfully installed the
-        <a href="https://github.com/laminas/laminas-mvc-skeleton" target="_blank">Laminas MVC Skeleton</a>.
-        This skeleton can serve as a simple starting point for you to begin
-        building your application on Laminas MVC.
-    </p>
-
-    <hr class="my-4">
-
-    <a class="btn btn-primary btn-lg" href="https://github.com/laminas" target="_blank">Check Laminas on GitHub &raquo;</a>
-</div>
-
-<div class="card-deck">
-    <div class="card">
-        <h2 class="card-header">Follow Development</h2>
-        <div class="card-body">
-            <p>
-                Laminas Project is under active development. If you are
-                interested in following the development, you can check
-                <a href="https://getlaminas.org/blog/">Laminas dev blog</a>,
-                and <a href="https://github.com/issues?utf8=%E2%9C%93&amp;q=is:issue+org:laminas">Laminas issue tracker</a>
-                (link requires a GitHub account). This is a great resource
-                for staying up to date with the latest developments!
-            </p>
-
-            <a class="btn btn-primary" href="https://getlaminas.org/" target="_blank">Laminas Project Portal &raquo;</a>
-        </div>
+    <?= $this->form()->openTag($form); ?>
+    <div class="form-group">
+        <?= $this->formLabel($name) ?>
+        <?= $this->formElement($name) ?>
+        <?= $this->formElementErrors()->render($name, $validationErrorAttributes) ?>
     </div>
 
-    <div class="card">
-        <h2 class="card-header">Discover Modules</h2>
-        <div class="card-body">
-            <p>
-                Laminas MVC is a modular application.
-                You can find multiple compatible modules on packagist.
-            </p>
-
-            <a class="btn btn-primary" href="https://packagist.org/?tags=module~zf2~zendframework~zend%20framework~zend%20framework%202~zf3~zf~zend~laminas" target="_blank">Explore Laminas Modules &raquo;</a>
-        </div>
+    <div class="form-group">
+        <?= $this->formLabel($email) ?>
+        <?= $this->formElement($email) ?>
+        <?= $this->formElementErrors()->render($email, $validationErrorAttributes) ?>
     </div>
 
-    <div class="card">
-        <h2 class="card-header">Help &amp; Support</h2>
-        <div class="card-body">
-            <p>
-                If you need any help or support while developing with Laminas,
-                you may reach us via <a href="https://laminas.dev/chat">chat</a> or
-                <a href="https://discourse.laminas.dev">forum</a>.
-                We'd love to hear any questions or feedback you may have
-                regarding any release.
-            </p>
-
-            <a class="btn btn-primary" href="https://laminas.dev/chat" target="_blank">Ping us on chat &raquo;</a>
-        </div>
+    <div class="form-group">
+        <?= $this->formLabel($telephone) ?>
+        <?= $this->formElement($telephone) ?>
+        <?= $this->formElementErrors()->render($telephone, $validationErrorAttributes) ?>
     </div>
+
+    <div class="form-group">
+        <?= $this->formLabel($position) ?>
+        <?= $this->formElement($position) ?>
+        <?= $this->formElementErrors()->render($position, $validationErrorAttributes) ?>
+    </div>
+
+    <div class="form-group">
+        <?= $this->formLabel($education) ?>
+        <?= $this->formElement($education) ?>
+        <?= $this->formElementErrors()->render($education, $validationErrorAttributes) ?>
+    </div>
+
+    <div class="form-group">
+        <?= $this->formLabel($comments) ?>
+        <?= $this->formElement($comments) ?>
+        <?= $this->formElementErrors()->render($comments, $validationErrorAttributes) ?>
+    </div>
+
+    <div class="form-group">
+        <?= $this->formLabel($file) ?>
+        <?= $this->formElement($file) ?>
+        <?= $this->formElementErrors()->render($file, $validationErrorAttributes) ?>
+    </div>
+
+    <div class="float-right">
+        <input class="btn btn-danger" type="reset" value="Reset fields">
+        <?= $this->formSubmit($submit); ?>
+    </div>
+
+    <?= $this->formHidden($form->get(Cv::ID)); ?>
+    <?= $this->form()->closeTag(); ?>
+
 </div>
