@@ -10,9 +10,8 @@ use Laminas\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
-    public function indexAction(): ViewModel|Response
+    public function indexAction(): ViewModel | Response
     {
         return $this->redirect()->toRoute('send-cv');
     }
-
 }

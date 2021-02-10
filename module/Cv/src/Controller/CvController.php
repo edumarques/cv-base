@@ -31,21 +31,20 @@ class CvController extends AbstractActionController
         EntityManager $entityManager,
         RemoteAddress $remoteAddress,
         string $cvStoragePath
-    )
-    {
+    ) {
         $this->entityManager = $entityManager;
         $this->remoteAddress = $remoteAddress;
         $this->cvStoragePath = $cvStoragePath;
     }
 
 
-    public function sendAction(): ViewModel|Response
+    public function sendAction(): ViewModel | Response
     {
         $request  = $this->getRequest();
         $response = $this->getResponse();
         $form     = CvForm::create();
 
-        if (!$request->isPost()) {
+        if (! $request->isPost()) {
             return new ViewModel(['form' => $form]);
         }
 
@@ -68,7 +67,7 @@ class CvController extends AbstractActionController
 
         $form->setData($post);
 
-        if (!$form->isValid()) {
+        if (! $form->isValid()) {
             $response->setStatusCode(Response::STATUS_CODE_400);
 
             return new ViewModel(['form' => $form]);

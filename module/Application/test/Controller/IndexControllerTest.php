@@ -47,5 +47,4 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->assertResponseStatusCode(404);
         $this->assertQuery('body .container');
     }
-
 }

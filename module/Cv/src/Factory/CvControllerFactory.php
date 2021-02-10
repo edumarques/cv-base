@@ -24,8 +24,7 @@ class CvControllerFactory implements FactoryInterface
         ContainerInterface $container,
         $requestedName,
         array $options = null
-    ): CvController
-    {
+    ): CvController {
         return new CvController(
             $container->get(EntityManager::class),
             $container->get(RemoteAddress::class),
