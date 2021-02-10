@@ -6,8 +6,11 @@ data/cache/*
 phpunit.xml
 .phpunit.result.cache
 .idea
-db/db.sqlite
 db/db.sqlite3
+db/test_db.sqlite3
 data/cvs/*
+data/cvs-test/*
 !data/cvs/.gitkeep
+!data/cvs-test/.gitkeep
 data/DoctrineORMModule
+coverage

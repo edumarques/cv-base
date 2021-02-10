@@ -41,7 +41,15 @@
     "serve": "php -S 127.0.0.1:9000 -t public",
     "create-tables": "php db/create_tables.php",
     "drop-tables": "php db/drop_tables.php",
-    "test": "phpunit"
+    "create-tables-test": "php db/create_tables_test.php",
+    "drop-tables-test": "php db/drop_tables_test.php",
+    "clear-cv-storage": "php data/clear-cv-storage.php",
+    "clear-cv-storage-test": "php data/clear-cv-storage-test.php",
+    "test": "phpunit",
+    "test:coverage": [
+      "@putenv XDEBUG_MODE=coverage",
+      "phpunit --coverage-clover coverage/logs/clover.xml --coverage-html coverage/coverage"
+    ]
   },
   "scripts-descriptions": {
     "cs-check": "Run coding standards checks.",
@@ -52,6 +60,10 @@
     "serve": "Start the built-in PHP web server and serve the application.",
     "create-tables": "Create the database tables for the application.",
     "drop-tables": "Drop the tables from the database.",
+    "create-tables-test": "Create the test database tables for the application.",
+    "drop-tables-test": "Drop the tables from the test database.",
+    "clear-cv-storage": "Clear 'cvs' folder.",
+    "clear-cv-storage-test": "Clear 'cvs-test' folder.",
     "test": "Run unit tests."
   }
 }
