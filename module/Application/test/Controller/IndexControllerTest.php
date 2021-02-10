@@ -37,6 +37,7 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->assertControllerName(IndexController::class); // as specified in router's controller name alias
         $this->assertControllerClass('IndexController');
         $this->assertMatchedRouteName('home');
+        $this->assertRedirectTo('/cv/send');
     }
 
 
@@ -44,6 +45,7 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
     {
         $this->dispatch('/invalid/route', 'GET');
         $this->assertResponseStatusCode(404);
+        $this->assertQuery('body .container');
     }
 
 }
