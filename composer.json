@@ -64,6 +64,7 @@
     "drop-tables-test": "Drop the tables from the test database.",
     "clear-cv-storage": "Clear 'cvs' folder.",
     "clear-cv-storage-test": "Clear 'cvs-test' folder.",
-    "test": "Run unit tests."
+    "test": "Run tests.",
+    "test:coverage": "Run tests and generate coverage report in '/coverage'."
   }
 }
