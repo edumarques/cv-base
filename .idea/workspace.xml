@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3b7a3cca-85de-40a0-b4de-61f4194881a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +202,7 @@
       <workItem from="1612749720865" duration="832000" />
       <workItem from="1612750921188" duration="8361000" />
       <workItem from="1612806066152" duration="47659000" />
-      <workItem from="1612981665249" duration="12972000" />
+      <workItem from="1612981665249" duration="13660000" />
     </task>
     <task id="LOCAL-00001" summary="Add application structure files">
       <created>1612753013817</created>
@@ -280,7 +281,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612994589378</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add travis build file">
+      <created>1612995620571</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1612995620571</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fix build file">
+      <created>1612995758694</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612995758694</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +313,9 @@
     <MESSAGE value="Fix coding standard issues" />
     <MESSAGE value="Add .idea files" />
     <MESSAGE value="Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
+    <MESSAGE value="Add travis build file" />
+    <MESSAGE value="Fix build file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix build file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

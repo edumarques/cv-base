@@ -1,5 +1,8 @@
 # CV Base
 
+[![Build Status](https://travis-ci.com/edumarques/cv-base.svg?branch=main)](https://travis-ci.com/edumarques/cv-base)
+[![codecov](https://codecov.io/gh/edumarques/cv-base/branch/main/graph/badge.svg)](https://codecov.io/gh/edumarques/cv-base)
+
 ## Scope
 
 This is an application to handle the storage of CVs.
